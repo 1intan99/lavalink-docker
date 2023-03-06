@@ -10,6 +10,9 @@ services:
       networks:
       - kongnet
 
+volumes:
+  lava:
+
 networks:
   kongnet:
         attachable: true
