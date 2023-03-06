@@ -11,6 +11,7 @@ FROM azul/zulu-openjdk-alpine:17-jre as Runner
 
 WORKDIR /opt/Lavalink
 
-COPY --from=Downloader /downloader/ /opt/Lavalink/
+COPY --from=Downloader /downloader/Lavalink.jar /opt/Lavalink/Lavalink.jar
+COPY --from=Downloader /downloader/application.yml /opt/Lavalink/application.yml
 
 CMD [ "java", "-jar", "Lavalink.jar" ]
